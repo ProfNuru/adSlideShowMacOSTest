@@ -8,5 +8,11 @@ const updateOnlineStatus = () => {
 
 window.addEventListener('online', updateOnlineStatus)
 window.addEventListener('offline', updateOnlineStatus)
-
 updateOnlineStatus()
+
+const API = {
+    load_status:()=>ipcRenderer.send('load_status'),
+    load_detail:(cb)=>ipcRenderer.on('load_detail',cb)
+}
+
+electron.contextBridge.exposeInMainWorld("api", API)

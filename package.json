@@ -1,11 +1,13 @@
 {
   "name": "electron_ds_app_v3",
   "version": "3.0.0",
+  "productName": "ds_electron_app_v3",
   "description": "DS Electron App V3",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . --out=dist/build --icon=assets/png/64x64.png --overwrite"
   },
   "repository": {
     "type": "git",
@@ -18,22 +20,23 @@
   },
   "homepage": "https://github.com/georgetony/electron_ds_app_v3#readme",
   "devDependencies": {
-    "electron": "^22.0.0"
+    "electron": "^22.0.0",
+    "electron-packager": "^17.1.1"
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",
-    "electron-log": "4.4.6",
+    "electron-log": "4.4.8",
     "electron-squirrel-startup": "1.0.0",
-    "fs-extra": "10.0.1",
-    "fs-jetpack": "4.3.1",
-    "get-folder-size": "2.0.1",
-    "image-downloader": "4.1.0",
-    "is-reachable": "5.1.1",
+    "fs-extra": "11.1.0",
+    "get-folder-size": "4.0.0",
+    "image-downloader": "4.3.0",
+    "is-reachable": "5.2.1",
     "md5-file": "5.0.0",
-    "node-fetch": "2.6.7",
+    "node-fetch": "3.3.0",
     "node-schedule": "2.1.0",
     "node-site-downloader": "^1.3.0",
     "url-exist-sync": "2.0.0",
-    "url-exists": "1.0.3"
+    "url-exists": "1.0.3",
+    "website-scraper": "^5.3.1"
   }
 }

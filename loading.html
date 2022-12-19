@@ -19,6 +19,7 @@
 <div class="logo">
     <img class="main-logo-image" src="img/stellar_ace_logo.png" alt="Stellar Ace">
     <img class="load-spinner" src="img/loading.gif" alt="">
+    <h4 id="loading-text"></h4>
 </div>
 </body>
 
@@ -39,6 +40,24 @@
         transform: translateX(-50%);
         bottom:-130px;
     }
+    #loading-text{
+        position:fixed;
+        left:50%;
+        transform: translateX(-50%);
+        bottom:0px;
+        font-style: italic;
+    }
 </style>
 
+<script>
+    const loadingText = document.getElementById('loading-text')
+    console.log(loadingText)
+    setInterval(()=>{
+        window.api.load_status()
+    },1000)
+    window.api.load_detail((e,detail)=>{
+        console.log(e)
+        loadingText.innerText = detail
+    })
+</script>
 </html>
