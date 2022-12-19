@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stellar Ace</title>
+    <script>
+        // const { ipcRenderer } = require("electron");
+        // const updateOnlineStatus = () => {
+        //     ipcRenderer.send('online_status',navigator.onLine ? 'online' : 'offline')
+        // }
+
+        // window.addEventListener('online', updateOnlineStatus)
+        // window.addEventListener('offline', updateOnlineStatus)
+
+        // updateOnlineStatus()
+    </script>
+</head>
+<body>
+<div class="logo">
+    <img class="main-logo-image" src="img/stellar_ace_logo.png" alt="Stellar Ace">
+    <img class="load-spinner" src="img/loading.gif" alt="">
+</div>
+</body>
+
+
+<style>
+    .logo{
+        height: 98vh;
+        width:98vw;
+        position:relative;
+    }
+    .main-logo-image{
+        height: 100%;
+        width: 100%;
+    }
+    .load-spinner{
+        position:fixed;
+        left:50%;
+        transform: translateX(-50%);
+        bottom:-130px;
+    }
+</style>
+
+</html>
